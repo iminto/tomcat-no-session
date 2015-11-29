@@ -8,9 +8,13 @@
 用cookie啊！并且天然分布式。
 
 ##使用方法
-配置context.xml
+下载jar包，扔到tomcat的lib目录下，配置context.xml
 ```XML
 <Manager className="org.apache.catalina.DefaultManager.DefaultSessionManager" />
 ```
 别问我为什么要取DefaultSessionManager这个名字...
 当然，也可以配置在server.xml的context节点里，全局和局部的区别。
+
+##Notice
+本方案只适用于Tomcat 7.另外代码兼容JDK6/JDK7，但是打包文件只兼容JDK7。如果需要JDK6下的文件，自行编译即可。
+tomcat8 据说session管理有一些变化，我没看Tomcat8的源码，也没有测试Tomcat 8的运行情况。如果有测试过的朋友，希望能反馈下。
